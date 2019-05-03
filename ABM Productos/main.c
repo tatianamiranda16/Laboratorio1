@@ -9,14 +9,21 @@ int main()
     //definir array.
     //cargar array.
     //mostrar array.
-
+//HACER BIBLOTECA PROVEEDOR H Y c
     int opcion;
 
     eProducto unProducto;
     eProducto listadoProductos[T];
+
+    eProveedor listadoProveedor[3];
+
     construirArray(listadoProductos,T);
+
+
     inicializarProductos(listadoProductos,T);
+    inicializarProveedor(listadoProveedor,T);
     mostrarArray(listadoProductos,T);
+    mostrarArrayProveedor(listadoProveedor,3);
 
     do
     {
@@ -26,7 +33,7 @@ int main()
         switch(opcion)
         {
             case 1:
-               insertarProducto(listadoProductos, T);
+               insertarProducto(listadoProductos,listadoProveedor, T);
             break;
             case 2:
                 borrarProducto(listadoProductos,T);
